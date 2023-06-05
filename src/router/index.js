@@ -1,6 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
 import CartList from '@/components/cart/CartList.vue';
 import ProductList from "@/components/product/ProductList.vue";
+import ProductItem from "@/components/product/ProductItem.vue";
 import NotFound from "@/components/NotFound.vue";
 
 const routes = [
@@ -14,8 +15,12 @@ const routes = [
       component: ProductList
   },
   {
+      path: '/products/:id',
+      component: ProductItem,
+      props: true
+  },
+  {
       path: "/cart",
-      name: "CartList",
       component: CartList
   },        
   {

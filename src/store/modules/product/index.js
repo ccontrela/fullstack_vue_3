@@ -21,7 +21,11 @@ const actions = {
 };
 
 const getters = {
-  productItems: state => state.productItems
+  productItems: state => state.productItems,
+  productItemFromId: (state) => (id) => {
+    console.log("from Id : " + id);
+    return state.productItems.find(productItem => productItem.id === id)
+  }
 };
 
 const productModule = {

@@ -13,7 +13,9 @@
         <CartListItem :cartItem="cartItem" />
       </li>
       <div class="cart-details">
-        <p>Total Quantity: <span class="has-text-weight-bold">{{ cartQuantity }}</span></p>
+        <p>Total Quantity: 
+          <span class="has-text-weight-bold">{{ cartQuantity }}</span>
+        </p>
         <p @click="removeAllCartItems" class="cart-remove-all--text">
           <i class="fa fa-trash"></i>Remove all
         </p>
@@ -32,16 +34,19 @@ import CartListItem from './CartListItem';
 export default {
   name: 'CartList',
   computed: {
-    ...mapGetters(['cartItems', 'cartTotal', 'cartQuantity'])
+    ...mapGetters([
+      'cartItems',
+      'cartTotal',
+      'cartQuantity'
+    ])
   },
-  created () {
-    this.$store.dispatch('getCartItems');
+  methods: {
+    ...mapActions([
+      'removeAllCartItems'
+    ])
   },
   components: {
     CartListItem
-  },
-  methods: {
-    ...mapActions(['removeAllCartItems'])
   }
 }
 </script>
