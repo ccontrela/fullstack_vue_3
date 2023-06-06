@@ -5,7 +5,7 @@
         "description": "Lightweight, breathable hoodie with the Fullstack Crest. Guaranteed to keep you looking fresh while warm.",
         "price": 19.99,
         "image_tag": "hoodie.png",
-        "quantity": 2
+        "quantity": 5
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "description": "The original Fullstack clothing item. Always prepared to keep your style in check.",
         "price": 15.99,
         "image_tag": "tee.png",
-        "quantity": 1
+        "quantity": 4
     },
     {
         "id": 3,

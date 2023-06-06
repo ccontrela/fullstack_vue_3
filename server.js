@@ -23,6 +23,17 @@ app.use((req, res, next) => {
   next();
 });
 
+const FAKE_DELAY = 500;
+
+app.post('/login', (req, res) => {
+  setTimeout(() => (
+    res.json({
+      success: true,
+      token: API_TOKEN,
+    })
+  ), FAKE_DELAY);
+});
+
 app.get('/products', (req, res) => {
   fs.readFile(PRODUCT_DATA_FILE, (err, data) => {
     res.setHeader('Cache-Control', 'no-cache');
