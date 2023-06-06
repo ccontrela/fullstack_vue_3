@@ -13,9 +13,7 @@ const mutations = {
 
 const actions = {
   getCartItems ({ commit }) {
-    axios.get('/api/cart', {
-      headers: {Authorization: 'Bearer D6W69PRgCoDKgHZGJmRUNA'}
-    }).then((response) => {
+    axios.get('/api/cart?token=D6W69PRgCoDKgHZGJmRUNA').then((response) => {
       commit(types.UPDATE_CART_ITEMS, response.data)
     });
   },

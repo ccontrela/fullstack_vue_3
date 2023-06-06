@@ -6,6 +6,8 @@ const path = require('path');
 
 const app = express();
 
+const API_TOKEN = "D6W69PRgCoDKgHZGJmRUNA";
+
 const PRODUCT_DATA_FILE = path.join(__dirname, 'server-product-data.json');
 const CART_DATA_FILE = path.join(__dirname, 'server-cart-data.json');
 

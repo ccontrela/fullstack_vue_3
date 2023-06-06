@@ -1,5 +1,9 @@
 <template>
     <section id="product-item" class="box">
+        <!-- The new return icon element -->
+        <span class="return-icon" @click="$router.go(-1)">
+            <i class="fa fa-arrow-left is-primary"></i>
+        </span>
         <div class="product-item__details">
             <h1 class="title is-4"> 
                 <p>{{ productItem.title }}</p> 
