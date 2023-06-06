@@ -1,4 +1,4 @@
-# my-router-project
+# Fullstack vue 3
 
 ## Project setup
 ```
